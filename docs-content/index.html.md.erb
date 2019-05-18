@@ -1,62 +1,53 @@
 ---
-title: YOUR-PRODUCT-NAME (Beta)
+title: WSO2 API Manager - Distributed (Beta)
 owner: Partners
 ---
 
 <strong><%= modified_date %></strong>
 
-**If this product is in beta, keep and edit the warning note below.**
 <p class="note warning">
 <strong>Warning: </strong>
-The PRODUCT-NAME for PCF tile is currently in beta and is intended for evaluation and test purposes only. 
-Do not use this product in a PCF production environment.
+The WSO2 API Manager - Distributed for PCF tile is currently in beta and is intended for evaluation
+and test purposes only. Do not use this product in a PCF production environment.
 </p>
 
-**This topic begins with a brief description of what the product tile (e.g. Apigee Edge Service Broker for PCF) does, 
-whereas the Overview section below describes what the service itself (e.g. Apigee Edge) does. See below for an example.**
-
-This documentation describes the Apigee Edge Service Broker for Pivotal Cloud Foundry (PCF). The Apigee Edge Service 
-Broker for PCF enables developers to manage APIs for their PCF apps through the Apigee Edge management console.
-
-**Note**: This description will appear under **OVERVIEW** in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io).
+This documentation describes WSO2 API Manager - Distributed Installer for Pivotal Cloud
+Foundry (PCF), which installs the API management service
+[WSO2 API Manager 2.6.0](https://wso2.com/api-management/) on PCF. WSO2 API Manager - Distributed
+Tile provides full lifecycle API development, integration, and management.
 
 ## <a id='overview'></a>Overview
 
-**The overview describes the service that your product offers to PCF developers. 
-Make sure to overview the features of the integration.
-Don't focus only on the overview of your product that is being integrated.
-See below for an example.**
+WSO2 API Manager is a unique, open approach to full lifecycle API development, integration, and
+management. It allows extensibility and customization, and ensures freedom from lock-in. As part of
+the larger WSO2 Integration Agile Platform, it is a central component used to deploy and manage
+API-driven ecosystems. It’s hybrid integration capabilities further simplify projects that span
+traditional as well as micro-service environments.
 
-The Apigee Edge Service Broker for PCF registers a service broker with PCF and exposes its service plans on the 
-Marketplace. Developers can then create service plan instances using Apps Manager or the Cloud Foundry Command 
-Line Interface (cf CLI) and bind them to their apps.
-
-Creating an Apigee Edge for PCF service instance and binding it to an app creates an Apigee Edge API proxy that 
-handles requests for the app. This lets developers use the Apigee Edge management console to manage API request 
-handling between clients and the app.
-
-**Note**: This overview will appear under **OVERVIEW**, combined with the description above in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io).
 
 ## <a id='features'></a>Key Features
 
-**Note**: This feature list will appear under **FEATURES** in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io). 
-Make sure you list the key features of the tile (the integration). 
-We cannot accept a list of the key features of your product that we are integrating.
+WSO2 API Manager - Distributed includes the following key features:
 
-YOUR-PRODUCT-NAME includes the following key features:
+* Design and Prototype APIs
+* Publish APIs and Govern API Use
+* Control Access and Enforce Security
+* Developer Portal
+* Manage the Developer Community
+* Manage and Scale API Traffic
+* Monitor and Monetize
+* Pluggable, Extensible, and Themeable
+* WSO2 Platform Multi-tenancy Support
+* API analytics
+* Key Manager
 
-* Feature one
-* Feature two
-* Feature three
 
 
 
 ## <a id="snapshot"></a>Product Snapshot
 
-The following table provides version and version-support information about PRODUCT-NAME.
+The following table provides version and version-support information about WSO2 API Manager -
+Distributed.
 
 <table class="nice">
     <th>Element</th>
@@ -67,46 +58,52 @@ The following table provides version and version-support information about PRODU
     </tr>
     <tr>
         <td>Release date</td>
-        <td>YOUR-RELEASE-DATE (Ex: July 1, 2019)</td>
+        <td>October 11, 2018</td>
     </tr>
     <tr>
         <td>Software component version</td>
-        <td>YOUR-SOFTWARE-COMPONENT-VERSION-NUMBER</td>
+        <td>2.6.0</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>YOUR-COMPATIBLE-OPS-MAN-VERSION (Ex. 2.2, 2.3, and 2.4)</td>
+        <td>2.4.x</td>
     </tr>
     <tr>
         <td>Compatible Pivotal Application Service version(s)</td>
-        <td>YOUR-COMPATIBLE-PIVOTAL-APPLICATION-SERVICE-VERSION (Ex. 2.2, 2.3, and 2.4)</td>
+        <td>-</td>
     </tr>
     <tr>
        <td>BOSH stemcell version</td>
-       <td>Ubuntu Xenial</td>
+       <td>Ubuntu Xenial 170.15</td>
     </tr>
     <tr>
         <td>IaaS support</td>
-        <td>AWS?, Azure?, GCP?, OpenStack?, and vSphere?</td>
-    </tr>
-    <tr>
-        <td>IPsec support?</td>
-        <td>[Yes or No]</td>
+        <td>AWS, Azure, GCP, OpenStack, and vSphere</td>
     </tr>
 </table>
 
 
 ## <a id="reqs"></a>Requirements
 
-**Provide any general or specific requirements, prerequisites, or dependencies here. 
-A general requirement might be something like, "An AppDynamics account." 
-A specific requirement might be something like, "Packaging Dependencies for Offline Buildpacks."**
+WSO2 API Manager - Distributed has the following requirements:
 
-YOUR-PRODUCT-NAME has the following requirements:
+* SQL Database databases (MySQL or MS SQL) for storing data. In this context, PRODUCT_HOME will
+refer to a extracted [WSO2 API Manager Binary](https://wso2.com/api-management/install/binary/):
+    * Database for storing user management and registry data
+        * For MySQL(versions prior to version 5.7) use &lt;PRODUCT_HOME&gt;/dbscripts/mysql.sql
+        script
+        * For MySQL(versions prior to version 5.7) use &lt;PRODUCT_HOME&gt;/dbscripts/mysql5.7.sql
+        script
+        * For MSSQL use &lt;PRODUCT_HOME&gt;/dbscripts/mssql.sql script
+    * Database for API Manager specific data
+        * For MySQL(versions prior to version 5.7) use &lt;PRODUCT_HOME&gt;/dbscripts/apimgt/mysql.sql
+        script
+        * For MySQL(versions prior to version 5.7) use &lt;PRODUCT_HOME&gt;dbscripts/apimgt/mysql5.7.sql
+        script
+        * For MSSQL use &lt;PRODUCT_HOME&gt;/dbscripts/apimgt/mssql.sql script
+    * Database for storing analytics data
 
-+ PREREQUISITE-1
 
-+ PREREQUISITE-2
 
 ## <a id="limitations"></a>Limitations
 
@@ -115,7 +112,8 @@ YOUR-PRODUCT-NAME has the following requirements:
 ## <a id="feedback"></a>Feedback
 
 If you have a feature request, questions, or information about a bug, please email
-[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to YOUR-SUPPORT-EMAIL.
+[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to
+[dev@wso2.org](mailto:dev@wso2.org).
 
 ## <a id='license'></a>License
 
