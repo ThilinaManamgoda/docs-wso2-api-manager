@@ -82,21 +82,23 @@ The following table provides version and version-support information about WSO2 
 
 WSO2 API Manager has the following requirements:
 
-* SQL Database databases (MySQL or MS SQL) for storing data. In this context, PRODUCT_HOME will
-refer to a extracted [WSO2 API Manager Binary](https://wso2.com/api-management/install/binary/):
-    * Database for storing user management and registry data
-        * For MySQL(versions prior to version 5.7) use `<PRODUCT_HOME>/dbscripts/mysql.sql`
-        script
-        * For MySQL(versions prior to version 5.7) use `<PRODUCT_HOME>/dbscripts/mysql5.7.sql`
-        script
-        * For MSSQL use `<PRODUCT_HOME>/dbscripts/mssql.sql` script
+* SQL Database databases (MySQL or MS SQL) for storing data.
+    * Database for storing user management
+        * For MySQL(versions prior to version 5.7) use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/um-mysql.sql)
+        * For MySQL(version 5.7 or later version) use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/um-mysql5.7.sql)
+        * For MSSQL use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/um-mssql.sql)
+    * Database for storing registry data
+        * For MySQL(versions prior to version 5.7) use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/reg-mysql.sql)
+        * For MySQL(version 5.7 or later version) use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/reg-mysql5.7.sql)
+        * For MSSQL use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/reg-mssql.sql)
     * Database for API Manager specific data
-        * For MySQL(versions prior to version 5.7) use `<PRODUCT_HOME>/dbscripts/apimgt/mysql.sql`
-        script
-        * For MySQL(versions prior to version 5.7) use `<PRODUCT_HOME>/dbscripts/apimgt/mysql5.7.sql`
-        script
-        * For MSSQL use `<PRODUCT_HOME>/dbscripts/apimgt/mssql.sql` script
+        * For MySQL(versions prior to version 5.7) use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/apim-mysql.sql)
+        * For MySQL(version 5.7 or later version) use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/apim-mysql5.7.sql)
+        * For MSSQL use [script](https://github.com/wso2/pivotal-cf-apim/blob/2.6.x/pattern-2/bosh-release/dbscripts/apim-mssql.sql)
     * Database for storing analytics data
+    * Database for API Manager Analytics clustering
+    * Database for API Manager Analytics persistence
+
 
 
 
