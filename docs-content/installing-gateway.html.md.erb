@@ -1,0 +1,328 @@
+---
+title: Installing and Configuring WSO2 API Manager Gateway for VMware Tanzu
+owner: Partners
+---
+
+<strong><%= modified_date %></strong>
+
+This topic describes how to install and configure WSO2 API Manager Gateway for VMware Tanzu.
+
+To install the WSO2 API Manager Gateway for VMware Tanzu file on the Ops Manager Installation Dashboard, do the following:
+
+1. Download the product file from Pivotal Network.
+
+2. Navigate to the Ops Manager Installation Dashboard and click **Import a Product** to upload the
+product file.
+
+3. Under the **Import a Product** button, click **+** next to the version number of WSO2 API Manager Gateway for VMware Tanzu.
+This adds the tile to your staging area.
+
+4. Click the newly added **WSO2 API Manager Gateway for VMware Tanzu** tile.
+
+5. In order to commence configurations navigate to the WSO2  API Manager Gateway page and Select the **Settings** tab,
+ thereafter choose the **AZ and Network Assignments** tab from the left pane.
+ ![AZ](images/gateway/az.png)
+
+   1. **Place singleton jobs in**: Select the singleton AZ jobs in which the WSO2API Manager Gateway VM needs to run.
+   2. **Balance other jobs in**: Select any combination of AZ jobs in which the WSO2 API Manager Gateway VM needs to run.
+   3. **Network**: Select the desired network in which the WSO2API Manager Gateway VM needs to run.
+   4. Click **Save**.
+
+6. Configure the Admin user: Select **Admin user** tab and follow the steps below
+    ![admin-user](images/gateway/admin-creds.png)
+    To configure Admin user credentials:
+    1. Configure the fields:
+        <table>
+         <tr>
+             <th>Field</th>
+             <th>Description</th>
+         </tr>
+         <tr>
+            <td>Username</td>
+            <td>Username of the Admin user</td>
+         </tr>
+         <tr>
+            <td>Password</td>
+            <td>The password of the Admin user</td>
+         </tr>
+        </table>
+    2. Click **Save**.
+
+7. Key Manager Configurations: Select the **Key Manager Configuration** tab in the left pane, next follow the instructions below
+   ![key-manager](images/gateway/key-manager.png)
+    To configure Key Manager Configurations:
+    1. Configure the fields:
+        <table>
+         <tr>
+             <th>Field</th>
+             <th>Description</th>
+         </tr>
+         <tr>
+            <td>Key Manager service URL</td>
+            <td>Key Manager service URL</td>
+         </tr>
+         <tr>
+            <td>Key Manager credentials: Username</td>
+            <td>Username for Key Manager</td>
+         </tr>
+          <tr>
+            <td>Key Manager credentials: Password</td>
+            <td>The password for Key Manager</td>
+         </tr>
+        </table>
+    2. Click **Save**.
+
+8. Throttling configurations: To include **Throttling configurations** follow the below instructions
+   ![throttling](images/gateway/throttling.png)
+    To configure throttling:
+    1. Configure the fields:
+        <table>
+         <tr>
+             <th>Field</th>
+             <th>Default</th>
+             <th>Description</th>
+         </tr>
+         <tr>
+            <td>Traffic Manager credentials: Username</td>
+            <td style="text-align:center">-</td>
+            <td>Username of the Traffic Manager</td>
+         </tr>
+         <tr>
+            <td>Traffic Manager credentials: Password</td>
+            <td style="text-align:center">-</td>
+            <td>The password of the Traffic Manager</td>
+         </tr>
+          <tr>
+            <td>Enable unlimited tier</td>
+            <td style="text-align:center">True</td>
+            <td>Enable unlimited tier</td>
+         </tr>
+         <tr>
+            <td>Enable header based throttling</td>
+            <td style="text-align:center">False</td>
+            <td>Enable header-based throttling</td>
+         </tr>
+         <tr>
+            <td>Enable JWT claim based throttling</td>
+            <td style="text-align:center">False</td>
+            <td>Enable JWT claim based throttling</td>
+         </tr>
+          <tr>
+            <td>Enable query param based throttling</td>
+            <td style="text-align:center">False</td>
+            <td>Enable query param based throttling</td>
+         </tr>
+         <tr>
+            <td>WSO2 Traffic Manager 1 decision endpoint</td>
+            <td style="text-align:center">-</td>
+            <td>Traffic Manager 1 decision endpoint </td>
+         </tr>
+         <tr>
+            <td>WSO2 Traffic Manager 1 URL</td>
+            <td style="text-align:center">-</td>
+            <td>Traffic Manager 1 URL</td>
+         </tr>
+         <tr>
+            <td>WSO2 Traffic Manager 1 Auth URL</td>
+            <td style="text-align:center">-</td>
+            <td>Traffic Manager 1 Auth URL</td>
+         </tr>
+         <tr>
+            <td>WSO2 Traffic Manager 2 decision endpoint</td>
+            <td style="text-align:center">-</td>
+            <td>Traffic Manager 2 decision endpoint</td>
+         </tr>
+         <tr>
+            <td>WSO2 Traffic Manager 2 URL</td>
+            <td style="text-align:center">-</td>
+            <td>Traffic Manager 2 URL</td>
+         </tr>
+         <tr>
+            <td>WSO2 Traffic Manager 2 Auth URL</td>
+            <td style="text-align:center">-</td>
+            <td>Traffic Manager 2 Auth URL</td>
+         </tr>
+        </table>
+    2. Click **Save**.
+
+8. Analytics configurations:
+   ![analytics](images/gateway/analytics.png)
+    By default publishing analytics is disabled. To enable publishing analytics:
+    1. Select **Enable**.
+    2. Configure the fields:
+        <table>
+         <tr>
+             <th>Field</th>
+             <th>Description</th>
+         </tr>
+         <tr>
+            <td>Analytics server credentials: Username</td>
+            <td>Username of the Analytics server</td>
+         </tr>
+         <tr>
+            <td>Analytics server credentials: Password</td>
+            <td>The password of the Analytics server</td>
+         </tr>
+         <tr>
+            <td>WSO2 Analytics server 1 URL</td>
+            <td>WSO2 Analytics server 1 URL</td>
+         </tr>
+         <tr>
+            <td>WSO2 Analytics server 1 Auth URL</td>
+            <td>WSO2 Analytics server 1 Auth URL</td>
+         </tr>
+         <tr>
+            <td>WSO2 Analytics server 2 URL</td>
+            <td>WSO2 Analytics server 2 URL</td>
+         </tr>
+         <tr>
+            <td>WSO2 Analytics server 2 Auth URL</td>
+            <td>WSO2 Analytics server 2 Auth URL</td>
+         </tr>
+        </table>
+    3. Click **Save**.
+
+9. Cache configurations:
+   ![chache](images/gateway/cache.png)
+    To configure caching:
+    1. Configure the fields:
+        <table>
+         <tr>
+             <th>Field</th>
+             <th>Default</th>
+             <th>Description</th>
+         </tr>
+         <tr>
+            <td>Enable gateway token cache</td>
+            <td style="text-align:center">True</td>
+            <td>Enable gateway token cache</td>
+         </tr>
+         <tr>
+            <td>Gateway token cache expiry time</td>
+            <td style="text-align:center">15</td>
+            <td>Gateway token cache expiry time</td>
+         </tr>
+         <tr>
+            <td>Enable gateway cache resource</td>
+            <td style="text-align:center">True</td>
+            <td>Enable gateway cache resource</td>
+         </tr>
+        </table>
+    2. Click **Save**.
+
+10. JWT token configurations:
+   ![jwt](images/gateway/jwt.png)
+   By default, JWT tokens are enabled. To configure the JWT token:
+    1. Configure the fields:
+        <table>
+         <tr>
+             <th>Field</th>
+             <th>Default</th>
+             <th>Description</th>
+         </tr>
+         <tr>
+            <td>JWT encoding</td>
+            <td style="text-align:center">base64</td>
+            <td>JWT encoding</td>
+         </tr>
+         <tr>
+            <td>JWT generator implementation</td>
+            <td style="text-align:center">org.wso2.carbon.apimgt.keymgt.token.JWTGenerator</td>
+            <td>Fully qualified custom JWT generator to used in JWT(Self Contained) Access Tokens</td>
+         </tr>
+         <tr>
+            <td>JWT claim dialect</td>
+            <td style="text-align:center">http://wso2.org/claims</td>
+            <td>The dialect URI under which the user's claims are be looked for</td>
+         </tr>
+         <tr>
+            <td>JWT header</td>
+            <td style="text-align:center">X-JWT-Assertion</td>
+            <td>The name of the HTTP header to which the JWT is attached</td>
+         </tr>
+         <tr>
+            <td>JWT signing algorithm</td>
+            <td style="text-align:center">SHA256withRSA</td>
+            <td>The signing algorithm used to sign the JWT</td>
+         </tr>
+         <tr>
+            <td>JWT enable user claims</td>
+            <td style="text-align:center">True</td>
+            <td>Enable user claims in JWT in opaque Token</td>
+         </tr>
+         <tr>
+            <td>JWT claims extractor implementation</td>
+            <td style="text-align:center">org.wso2.carbon.apimgt.impl.token.DefaultClaimsRetriever</td>
+            <td>Custom claim Retriever to add custom claims into JWT when invocation token in opaque mode</td>
+         </tr>
+        </table>
+    2. Click **Save**.
+11. Keystore configurations:
+   ![keystore-main](images/gateway/keystore-main.png)
+    1. To add CA trust certificates to the Key store(wso2carbon.jks):
+        1. Click **ADD** under **Key store CA certs**.
+           ![keystore-ca](images/gateway/keystore-ca.png)
+        2. Configure the fields:
+            <table>
+             <tr>
+                 <th>Field</th>
+                 <th>Description</th>
+             </tr>
+             <tr>
+                <td>Alias</td>
+                <td>Alias for the certificate</td>
+             </tr>
+             <tr>
+                <td>CA cert</td>
+                <td>PEM encoded CA certificate content</td>
+             </tr>
+            </table>
+    2. To add Key pairs to the Key store(wso2carbon.jks):
+        1. Click **ADD** under **Key store Key pairs**.
+           ![keystore-key-pair](images/gateway/keystore-key-pair.png)
+        2. Configure the fields:
+            <table>
+             <tr>
+                 <th>Field</th>
+                 <th>Description</th>
+             </tr>
+             <tr>
+                <td>Alias</td>
+                <td>Alias for the key pair</td>
+             </tr>
+             <tr>
+                <td>Certificate PEM</td>
+                <td>PEM encoded public certificate content</td>
+             </tr>
+             <tr>
+                <td>Private PEM</td>
+                <td>PEM encoded private certificate content</td>
+             </tr>
+            </table>
+    3. To add CA certificates to the Client trust store(client-truststore.jks):
+        1. Click **ADD** under **Client trust store CA certs**.
+           ![keystore-ca](images/gateway/keystore-clien-truststore-ca.png)
+        2. Configure the fields:
+            <table>
+             <tr>
+                 <th>Field</th>
+                 <th>Description</th>
+             </tr>
+             <tr>
+                <td>Alias</td>
+                <td>Alias for the certificate</td>
+             </tr>
+              <tr>
+                <td>CA cert</td>
+                <td>PEM encoded CA certificate content</td>
+             </tr>
+            </table>
+    3. Click **Save**.
+
+12. License key:The instruction to add the WSO2 license key is described below:
+    ![license-key](images/gateway/license-key.png)
+    1. Add the WSO2 license key corresponding to your WSO2 subscription. If you don’t have a license key, please contact a [WSO2 account manager](https://wso2.com/contact/).
+    2. Click **Save**.
+
+13. Return to the Ops Manager Installation Dashboard and click **Apply changes** to install WSO2 API Manager Gateway for VMware Tanzu.
+
